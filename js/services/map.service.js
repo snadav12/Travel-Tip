@@ -1,7 +1,8 @@
 export const mapService = {
     initMap,
     addMarker,
-    panTo
+    panTo,
+    clickMap
 }
 
 var gMap;
@@ -18,6 +19,10 @@ function initMap(lat = 32.0749831, lng = 34.9120554) {
                 })
             console.log('Map!', gMap);
         })
+}
+
+function clickMap(loc) {
+    console.log(loc);
 }
 
 function addMarker(loc) {

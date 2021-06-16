@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.main-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.main-bar button {
+    height: 40px;
+}
+
+button:hover {
+    cursor: pointer;
+}

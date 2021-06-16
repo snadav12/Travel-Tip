@@ -6,6 +6,7 @@ window.onAddMarker = onAddMarker;
 window.onPanTo = onPanTo;
 window.onGetLocs = onGetLocs;
 window.onGetUserPos = onGetUserPos;
+window.onClickMap = onClickMap;
 
 function onInit() {
     mapService.initMap()
@@ -23,7 +24,12 @@ function getPosition() {
     })
 }
 
-function onAddMarker() {
+function onClickMap() {
+    // console.log(onClickMap.latLng.toJSON());
+}
+
+function onAddMarker(ev) {
+    ev.preventDefault();
     console.log('Adding a marker');
     mapService.addMarker({ lat: 32.0749831, lng: 34.9120554 });
 }
@@ -47,6 +53,7 @@ function onGetUserPos() {
             console.log('err!!!', err);
         })
 }
+
 function onPanTo() {
     console.log('Panning the Map');
     mapService.panTo(35.6895, 139.6917);
